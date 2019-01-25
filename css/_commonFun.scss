@@ -1,0 +1,20 @@
+@mixin fakeElement($x,$y) {
+    content:'';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    box-shadow: $x $y 1px 0px #ccc inset;
+}
+
+
+@mixin  setTextLine($line) {
+    display: -webkit-box;
+    overflow: hidden; 
+    white-space: normal !important; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word; 
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
